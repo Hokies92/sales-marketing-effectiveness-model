@@ -1,0 +1,432 @@
+
+===== SHEET: 'Orientation' dims=A1:F10 max_row=10 max_col=6
+merged: ['B3:F4', 'B6:F6', 'B10:F10', 'B5:F5', 'B1:F2', 'B8:F8']
+    B1 | 'Sales and Marketing Efficiency Modeling Tool' | fmt=General
+    B5 | 'Overview:  This worksheet is intended to provide you with visibility into your sales and marketing activities.  This model helps you examine four business scenarios that can help you improve your business performance: increase the size of your sales force, increase your sales organization’s close rate, decrease your sales cycle time, or increase your average order size. By entering historical and assumptive data, you will be able to determine the impact of each of these investment decisions on your top line revenue and bottom line performance.  For example, a 10% decrease in your sales force, coupled with a 10% improvement in your average order size could increase your top line revenue by 7%, but increase your operating margin by almost 800%.  Finally, this tool will help you identify the challenges you must overcome to achieve success in each of the business scenarios and provide you with a better framework to assess current and future sales and marketing investments.   ' | fmt=General
+    B6 | 'It is broken down into the following sections:  1)  Data entry - enter historical data and metrics assumptions about your sales and marketing performance.  2) Performance breakdown - a what-if tool that allows you to determine the impact of incremental improvements in your sales and marketing activities.  3) Impact Analysis - highlights the potential impact on your Income Statement by making incremental improvements.  4) Scenario Diagnostic - Lists common are obstacles that stand in the way of achieving your intended results for each scenario.' | fmt=General
+    B8 | 'A Few Points:  This is a generic tool intended to give you insight into your sales and marketing mechanics.  For a more complete analysis, we recommend that you perform this assessment for each of your sales channels and product lines.  Also, there are attributes about your business that are different from others.  This model can be tailored to your company.  Finally, "increase leads" is not listed as a business scenario because we consider lead generation to be a more leveraged way to conduct sales prospecting.  The number of leads, how to acquire them, and how much you can invest to acquire those leads are all handled in the tactical "drill down" spreadsheets that accompany this model.' | fmt=General
+   B10 | '©2011. Forrester Research.  All rights reserved.  ssantucci@forrester.com' | fmt=General
+
+===== SHEET: '1) Data entry ' dims=A1:G56 max_row=56 max_col=7
+merged: ['B4:F4', 'C41:E41', 'C24:D24', 'B47:F47', 'B12:B13', 'C31:E31', 'B3:F3', 'F12:F13', 'C9:E9', 'C42:D42', 'C45:D45', 'F49:F56', 'C26:D26', 'B18:F18', 'B27:F27', 'C20:D20', 'C11:E11', 'C16:D16', 'B2:F2', 'C54:D54', 'C25:D25', 'C39:E39', 'C55:D55', 'C50:D50', 'B5:F6', 'C44:D44', 'C48:E48', 'B20:B26', 'C22:D22', 'B14:F14', 'B8:F8', 'C56:D56', 'C43:D43', 'C12:D12', 'B29:F29', 'C28:E28', 'C46:D46', 'C21:D21', 'C19:E19', 'C37:E37']
+    B2 | 'Sales and Marketing Efficiency Model' | fmt=General
+    B3 | '©2011. Forrester Research  All rights reserved.  ssantucci@forrester.com ' | fmt=General
+    B4 | 'Directions.  Use this spreadsheet to enter your historical data or assumptions to help you determine your sales and marketing performance.  Cells that are yellow and areas where you should input your own data.  The data currently populated in each cell is based on industry averages for this fictitious company. ' | fmt=General
+    B7 | 'Data Element' | fmt=General
+    C7 | 'Description' | fmt=General
+    E7 | 'Entry' | fmt=General
+    F7 | 'Metric' | fmt=General
+    B8 | 'Individual Sales Representative Data ' | fmt=General
+    B9 | 'Number of sales territories' | fmt=General
+    C9 | 'Enter the number of open sales territories you had last year.  This is not based on individual people, so if someone has left the company, but the territory is still open, count that as a sales territory. ' | fmt=General
+    F9 | 100 | fmt=General
+   B11 | 'Average revenue per sales transaction' | fmt=General
+   C11 | 'This is the average deal size for your company.  For this simple analysis, you can get this figure by dividing your revenue by total number of contracts.  For more detailed analysis, we recommend that you break things down into product lines, services offerings, and sales channels.  You should also separate new client revenue from upselling your installed base.  For professional services, credit the total esimated hours for a project towards one sales transaction.  ' | fmt=General
+   F11 | 75000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   C12 | 'Number of contracts last year' | fmt=General
+   E12 | 755 | fmt=0
+   C13 | 'Revenue from those contract' | fmt=General
+   E13 | 25000000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B15 | 'Average fully loaded salary' | fmt=General
+   C15 | 'To help develop the most effective market development effort, we must better understand our cost of sales and what drives them.  Right now we are focusing on the salaries of the sales team only.  Do not count salaries of non-quota carrying managers, sales engineers, or other executives.  Your CFO should know what your benefits load rate is.  This metric assumes a fully loaded resource (insurance, 401K, FICA, allocation of overhead, etc). ' | fmt=General
+   F15 | F: =E16+(E16*E17) | V: 116850 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   C16 | 'Average salary per sales rep' | fmt=General
+   E16 | 95000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C17 | 'Corporate load rate' | fmt=General
+   E17 | 0.23 | fmt=0%
+   B19 | 'Average travel costs per rep' | fmt=General
+   C19 | "Most CFO's track overall travel expenses and try to reduce costs by limiting per diems, hotel expenses, etc.  However, the real driver is a sales call.  Sales people only incur these travel costs on the road.  The best way to reduce travel costs is to get a better return out of each sales trip.  Oftentimes, sales people will go on multiple client site visits to gain information easily gathered over the phone, or to have meetings with buyers who lack the right marketing materials to decide to buy your solution.  Below are the elements of a sales trip.  Estimate the costs assumed for each sales trip.  Again, only assume the cost of a single sales person.  Sales engineers and other costs are too complex for simple analysis." | fmt=General
+   F19 | F: =(($E$20+$E$21+$E$25)+($E$24*($E$22+$E$23)))*$E$26 | V: 47500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   C20 | 'Travel (air fare, train, mileage round trip) ' | fmt=General
+   E20 | 750 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C21 | 'Cabs, tolls, car rentals (etc)' | fmt=General
+   E21 | 200 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C22 | 'Meals (breakfast, lunch, dinner) per day' | fmt=General
+   E22 | 100 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C23 | 'Lodging (per night average room expense)' | fmt=General
+   E23 | 250 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C24 | 'Days gone per trip' | fmt=General
+   E24 | 2 | fmt=General
+   C25 | 'Entertainment (client dinners, lunch, movies, etc.) per each trip' | fmt=General
+   E25 | 250 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C26 | 'Trips per year' | fmt=General
+   E26 | 25 | fmt=[$-409]#,##0_);[RED]\(#,##0\)
+   B28 | 'Commission' | fmt=General
+   C28 | 'Commissions are the most logical and well understood driver of variable sales costs.  Simply enter your sales forces average commission.  Again, for simple analysis - just use an average.  This model can be modified to accommodate your whole compensation plan.' | fmt=General
+   F28 | 0.08 | fmt=0%
+   B30 | 'Sales Mechanics' | fmt=General
+   B31 | 'Number of pipeline opportunities manageable at one time' | fmt=General
+   C31 | 'One driver of sales force inefficiency is the amount of NON-selling time spent by sales people.  Some companies estimate as much at 50% of their time is invested in "non-selling" activities.  Our studies reveal that a larger portion of that time in spend in activitity that isn\'t value-added to customers.  The best way to financially measure that impact is by monitoring the number of accounts any given sales person can effectively manage at the same time.  The greater amount of time you allow your sales people to sell - the more opportunities they can work in a given year.' | fmt=General
+   F31 | 30 | fmt=General
+   B33 | 'Length of sales cycle (in months)' | fmt=General
+   C33 | 'Tracks how long from when a qualified opportunity enters the pipeline to when it closes as a sale.  Your sales process may have many steps, so for simplicity track the time it takes from first meeting to the date the agreement is received by accounting.  Most organizations do not track this information, so if you do not have the data - make an estimate.  The single greatest impact you can have on your business is to shorten your sales cycle times.' | fmt=General
+   F33 | 6 | fmt=General
+   B35 | 'Sales ramp up time (in months)' | fmt=General
+   C35 | 'How long does it take to get a new sales person up to speed to where they are operating at maximum efficiency?  Most high tech companies do a good job of training sales people on what their products are, but do very little to help them understand WHY the product is important or how to sell it.  This leads to lengthy "ramp up" times.  We recommend getting this figure from a sales manager.' | fmt=General
+   F35 | 12 | fmt=General
+   B37 | 'close rate' | fmt=General
+   C37 | 'This certainly can mean a lot of things to different people.  Here we want to understand the effectiveness of how well your organization manages the sales process from first sales meeting to eventual close.  Please estimate the percentage of all of the pipeline opportunities that your organization has worked that have resulted in an executed agreement. ' | fmt=General
+   F37 | 0.25 | fmt=0.00%
+   B38 | 'Overhead, Management, and Marketing Costs' | fmt=General
+   B39 | 'Total Sales Overhead and Marketing Costs' | fmt=General
+   C39 | 'Our goal with this exercise is to assess how well your company is is utilizing its sales and marketing assets.  To do this, we have to examine all of the associated costs that are related to sales and marketing performance.  This will help you put these investments in the right context and determine the effectiveness of these investments.  ' | fmt=General
+   F39 | F: =F41+F48 | V: 14500000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B41 | 'Sales Overhead Costs' | fmt=General
+   C41 | 'This tracks all of the non-variable costs associated with running a sales organization, and includes executive salaries, sales support, training, and performance plans.' | fmt=General
+   F41 | F: =E42+E43+E44+E45+E46 | V: 10800000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   C42 | 'Total Non-quota carrying sales manager salaries' | fmt=General
+   E42 | 2750000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C43 | 'Sales engineers or other non-quota sales support personnel' | fmt=General
+   E43 | 6000000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C44 | 'Sales administrative personnel (Sales operations, sales Admins)' | fmt=General
+   E44 | 800000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C45 | 'Training costs (total expenses related to training, travel for training, and all headcount associated)' | fmt=General
+   E45 | 500000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C46 | "Incentive costs (non-quota related commissions, President's Club costs, etc)" | fmt=General
+   E46 | 750000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   B48 | 'Marketing Costs' | fmt=General
+   C48 | 'This tracks all of the overall investments the company makes to help drive revenue.  Marketing resources are extremely important to consider because in most organizations the sales and marketing departments are not coordinated and this results in tremendous waste.' | fmt=General
+   F48 | F: =E49+E50+E51+E54+E55+E56+E52+E53 | V: 3700000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   C49 | 'All marketing personnel' | fmt=General
+   E49 | 1000000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C50 | 'Web site investments and maintenance' | fmt=General
+   E50 | 250000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C51 | 'Events - online and roadshows' | fmt=General
+   E51 | 500000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C52 | 'Advertising ' | fmt=General
+   E52 | 500000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C53 | 'Direct mail (print and online) ' | fmt=General
+   E53 | 250000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C54 | 'Telemarketing and other lead generation programs' | fmt=General
+   E54 | 250000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C55 | 'Investments in branding and Public Relations (logo design, consulting, identity, etc)' | fmt=General
+   E55 | 200000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   C56 | 'Collateral (sales tools, white papers, brochures, printing)' | fmt=General
+   E56 | 750000 | fmt=\$#,##0_);[RED]"($"#,##0\)
+
+===== SHEET: '2) Performance breakdown' dims=B2:R33 max_row=33 max_col=18
+merged: ['C24:K24', 'B8:K8', 'B4:K4', 'J5:K5', 'J7:K7', 'B5:C7', 'B15:K15', 'B20:K20', 'B2:K3', 'E5:H5', 'B28:K29']
+    B2 | '"What If" Performance Breakdown' | fmt=General
+    B4 | '©2011. Forrester Research.  All rights reserved. ssantucci@forrester.com' | fmt=General
+    B5 | '"What If" Performance Breakdown' | fmt=General
+    E5 | 'Individual Scenarios' | fmt=General
+    J5 | 'Combined' | fmt=General
+    E6 | 'Hire more sales people' | fmt=General
+    F6 | 'Increase Close Rate' | fmt=General
+    G6 | 'Decrease Sales Cycle Time' | fmt=General
+    H6 | 'Increase Average Revenue/ Transaction' | fmt=General
+    J6 | 'Increase close and deal size; decrease cycle' | fmt=General
+    K6 | 'Improve all scenarios' | fmt=General
+    E7 | 0.1 | fmt=0%
+    F7 | 0.1 | fmt=0%
+    G7 | 0.1 | fmt=0%
+    H7 | 0.1 | fmt=0%
+    I7 | 0 | fmt=0%
+    B8 | 'Individual Sales Representative Data ' | fmt=General
+    B9 | F: ='1) Data entry '!B9 | V: 'Number of sales territories' | fmt=General
+    C9 | F: ='1) Data entry '!F9 | V: 100 | fmt=General
+    E9 | F: =(C9*E7)+C9 | V: 110 | fmt=General
+    F9 | F: =C9 | V: 100 | fmt=General
+    G9 | F: =C9 | V: 100 | fmt=General
+    H9 | F: =C9 | V: 100 | fmt=General
+    J9 | F: =C9 | V: 100 | fmt=General
+    K9 | F: =E9 | V: 110 | fmt=General
+   B10 | F: ='1) Data entry '!B11 | V: 'Average revenue per sales transaction' | fmt=General
+   C10 | F: ='1) Data entry '!F11 | V: 75000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E10 | F: =C10 | V: 75000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F10 | F: =C10 | V: 75000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G10 | F: =C10 | V: 75000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H10 | F: =G10+(G10*H7) | V: 82500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J10 | F: =H10 | V: 82500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K10 | F: =J10 | V: 82500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B11 | F: ='1) Data entry '!B15 | V: 'Average fully loaded salary' | fmt=General
+   C11 | 87750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E11 | F: =C11 | V: 87750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F11 | 87750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G11 | 87750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H11 | 87750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J11 | 87750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K11 | F: =J11 | V: 87750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B12 | F: ='1) Data entry '!B19 | V: 'Average travel costs per rep' | fmt=General
+   C12 | F: ='1) Data entry '!F19 | V: 47500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E12 | F: =C12 | V: 47500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F12 | F: =C12 | V: 47500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G12 | F: =C12 | V: 47500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H12 | F: =C12 | V: 47500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J12 | F: =C12 | V: 47500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K12 | F: =J12 | V: 47500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B13 | F: ='1) Data entry '!B28 | V: 'Commission' | fmt=General
+   C13 | F: =C23*'1) Data entry '!$F$28 | V: 90000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E13 | F: =E23*'1) Data entry '!$F$28 | V: 90000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F13 | F: =F23*'1) Data entry '!$F$28 | V: 99000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G13 | F: =G23*'1) Data entry '!$F$28 | V: 100000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H13 | F: =H23*'1) Data entry '!$F$28 | V: 99000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J13 | F: =J23*'1) Data entry '!$F$28 | V: 121000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K13 | F: =K23*'1) Data entry '!$F$28 | V: 121000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B14 | 'Total cost per sales rep' | fmt=General
+   C14 | F: =SUM(C11:C13) | V: 225250 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E14 | F: =SUM(E11:E13) | V: 225250 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F14 | F: =SUM(F11:F13) | V: 234250 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G14 | F: =SUM(G11:G13) | V: 235250 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H14 | F: =SUM(H11:H13) | V: 234250 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J14 | F: =SUM(J11:J13) | V: 256250 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K14 | F: =J14 | V: 256250 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B15 | 'Sales Mechanics' | fmt=General
+   B16 | 'Number of pipeline opportunities manageable at one time' | fmt=General
+   C16 | F: ='1) Data entry '!F31 | V: 30 | fmt=General
+   E16 | F: =C16 | V: 30 | fmt=General
+   F16 | F: =C16 | V: 30 | fmt=General
+   G16 | F: =C16 | V: 30 | fmt=General
+   H16 | F: =C16 | V: 30 | fmt=General
+   J16 | F: =C16 | V: 30 | fmt=General
+   K16 | F: =J16 | V: 30 | fmt=0
+   B17 | 'Length of sales cycle (in months)' | fmt=General
+   C17 | F: ='1) Data entry '!F33 | V: 6 | fmt=General
+   E17 | F: =C17 | V: 6 | fmt=General
+   F17 | F: =C17 | V: 6 | fmt=General
+   G17 | F: =C17-(C17*G7) | V: 5.4 | fmt=General
+   H17 | F: =C17 | V: 6 | fmt=General
+   J17 | F: =G17 | V: 5.4 | fmt=General
+   K17 | F: =J17 | V: 5.4 | fmt=0
+   B18 | 'Sales ramp up time (in months)' | fmt=General
+   C18 | F: ='1) Data entry '!F35 | V: 12 | fmt=General
+   E18 | F: =C18 | V: 12 | fmt=General
+   F18 | F: =C18 | V: 12 | fmt=General
+   G18 | F: =C18 | V: 12 | fmt=General
+   H18 | F: =C18 | V: 12 | fmt=General
+   J18 | F: =C18 | V: 12 | fmt=General
+   K18 | F: =C18 | V: 12 | fmt=0
+   B19 | 'close rate' | fmt=General
+   C19 | F: ='1) Data entry '!F37 | V: 0.25 | fmt=0%
+   E19 | F: =C19 | V: 0.25 | fmt=0%
+   F19 | F: =(C19*F7)+C19 | V: 0.275 | fmt=0%
+   G19 | F: =C19 | V: 0.25 | fmt=0%
+   H19 | F: =C19 | V: 0.25 | fmt=0%
+   J19 | F: =F19 | V: 0.275 | fmt=0%
+   K19 | F: =J19 | V: 0.275 | fmt=0%
+   B20 | 'Individual Impact' | fmt=General
+   B21 | 'Maximum number of opportunities to pursue / year' | fmt=General
+   C21 | F: =(12/C17)*C16 | V: 60 | fmt=0.0
+   E21 | F: =(12/E17)*E16 | V: 60 | fmt=0.0
+   F21 | F: =(12/F17)*F16 | V: 60 | fmt=0.0
+   G21 | F: =(12/G17)*G16 | V: 66.6666666666667 | fmt=0.0
+   H21 | F: =(12/H17)*H16 | V: 60 | fmt=0.0
+   J21 | F: =(12/J17)*J16 | V: 66.6666666666667 | fmt=0.0
+   K21 | F: =J21 | V: 66.6666666666667 | fmt=0.0
+   B22 | 'Number of annual sales transactions per year / rep' | fmt=General
+   C22 | F: =C21*C19 | V: 15 | fmt=0.0
+   E22 | F: =C22 | V: 15 | fmt=0.0
+   F22 | F: =F21*F19 | V: 16.5 | fmt=0.0
+   G22 | F: =G21*G19 | V: 16.6666666666667 | fmt=0.0
+   H22 | F: =H21*H19 | V: 15 | fmt=0.0
+   J22 | F: =J21*J19 | V: 18.3333333333333 | fmt=0.0
+   K22 | F: =J22 | V: 18.3333333333333 | fmt=0.0
+   B23 | 'Average annual revenue per rep' | fmt=General
+   C23 | F: =C22*C10 | V: 1125000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E23 | F: =E22*E10 | V: 1125000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F23 | F: =F22*F10 | V: 1237500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G23 | F: =G22*G10 | V: 1250000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H23 | F: =H22*H10 | V: 1237500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J23 | F: =J22*J10 | V: 1512500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K23 | F: =J23 | V: 1512500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B24 | 'Outcomes' | fmt=General
+   B25 | 'Total revenues ' | fmt=General
+   C25 | F: =C23*C9 | V: 112500000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E25 | F: =((((12-E18)/12)*E23)*(E9-C9))+C25 | V: 112500000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F25 | F: =F23*F9 | V: 123750000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G25 | F: =G23*G9 | V: 125000000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H25 | F: =H23*H9 | V: 123750000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J25 | F: =(J23*J9) | V: 151250000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K25 | F: =(K23*K9)-((((12-E18)/12)*E23)*(E9-C9)) | V: 166375000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B26 | 'Total Sales Rep. Costs' | fmt=General
+   C26 | F: =C14*C9 | V: 22525000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E26 | F: =E14*E9 | V: 24777500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F26 | F: =F14*F9 | V: 23425000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G26 | F: =G14*G9 | V: 23525000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H26 | F: =H14*H9 | V: 23425000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J26 | F: =J14*J9 | V: 25625000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K26 | F: =K14*K9 | V: 28187500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B28 | 'This spreadsheet is designed to help you determine the impact of making incremental performance gains across the four business improvement scenarios.  Changes in the yellow cells will drive results throughout the entire workbook.  ' | fmt=General
+
+===== SHEET: '3) Impact Analysis' dims=B2:N36 max_row=36 max_col=14
+merged: ['B2:K3', 'B29:C29', 'B11:K11', 'B4:K4', 'J5:K5', 'B17:K17', 'B33:C36', 'B7:K7', 'B25:K25', 'E29:K36', 'B24:K24', 'B16:K16', 'B10:K10', 'B28:K28', 'E5:H5']
+    B2 | 'Financial Impact' | fmt=General
+    B4 | '©2011. Forrester Research.  All rights reserved. ssantucci@forrester.com' | fmt=General
+    E5 | 'Scenario' | fmt=General
+    J5 | 'Combined' | fmt=General
+    C6 | 'Baseline' | fmt=General
+    E6 | 'Hire more sales people' | fmt=General
+    F6 | 'Increase Close Rate' | fmt=General
+    G6 | 'Decrease Sales Cycle Time' | fmt=General
+    H6 | 'Increase Average Revenue/ Transaction' | fmt=General
+    J6 | 'Increase close and deal size; decrease cycle' | fmt=General
+    K6 | 'Improve all scenarios' | fmt=General
+    B7 | 'Revenue' | fmt=General
+    B8 | 'Total revenues ' | fmt=General
+    C8 | F: ='2) Performance breakdown'!C25 | V: 112500000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    E8 | F: ='2) Performance breakdown'!E25 | V: 112500000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    F8 | F: ='2) Performance breakdown'!F25 | V: 123750000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    G8 | F: ='2) Performance breakdown'!G25 | V: 125000000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    H8 | F: ='2) Performance breakdown'!H25 | V: 123750000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    J8 | F: ='2) Performance breakdown'!J25 | V: 151250000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    K8 | F: ='2) Performance breakdown'!K25 | V: 166375000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    B9 | 'Increase in revenue from base ' | fmt=General
+    E9 | F: =E8-'2) Performance breakdown'!$C$25 | V: 0 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    F9 | F: =F8-'2) Performance breakdown'!$C$25 | V: 11250000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    G9 | F: =G8-'2) Performance breakdown'!$C$25 | V: 12500000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    H9 | F: =H8-'2) Performance breakdown'!$C$25 | V: 11250000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    I9 | F: =I8-'2) Performance breakdown'!$C$25 | V: -112500000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    J9 | F: =J8-'2) Performance breakdown'!$C$25 | V: 38750000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+    K9 | F: =K8-'2) Performance breakdown'!$C$25 | V: 53875000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B11 | 'Costs' | fmt=General
+   B12 | 'Increase in sales costs ' | fmt=General
+   E12 | F: ='2) Performance breakdown'!E26-'2) Performance breakdown'!$C$26 | V: 2252500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F12 | F: ='2) Performance breakdown'!F26-'2) Performance breakdown'!$C$26 | V: 900000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G12 | F: ='2) Performance breakdown'!G26-'2) Performance breakdown'!$C$26 | V: 1000000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H12 | F: ='2) Performance breakdown'!H26-'2) Performance breakdown'!$C$26 | V: 900000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J12 | F: ='2) Performance breakdown'!J26-'2) Performance breakdown'!$C$26 | V: 3100000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K12 | F: ='2) Performance breakdown'!K26-'2) Performance breakdown'!$C$26 | V: 5662500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B13 | 'Total sales costs' | fmt=General
+   C13 | F: ='1) Data entry '!F41+'2) Performance breakdown'!C26 | V: 33325000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E13 | F: ='2) Performance breakdown'!E26+'1) Data entry '!$F$41 | V: 35577500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F13 | F: ='2) Performance breakdown'!F26+'1) Data entry '!$F$41 | V: 34225000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G13 | F: ='2) Performance breakdown'!G26+'1) Data entry '!$F$41 | V: 34325000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H13 | F: ='2) Performance breakdown'!H26+'1) Data entry '!$F$41 | V: 34225000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J13 | F: ='2) Performance breakdown'!J26+'1) Data entry '!$F$41 | V: 36425000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K13 | F: ='2) Performance breakdown'!K26+'1) Data entry '!$F$41 | V: 38987500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B14 | 'Total marketing costs' | fmt=General
+   C14 | F: ='1) Data entry '!F48 | V: 3700000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E14 | F: ='1) Data entry '!$F$48 | V: 3700000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F14 | F: ='1) Data entry '!$F$48 | V: 3700000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G14 | F: ='1) Data entry '!$F$48 | V: 3700000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H14 | F: ='1) Data entry '!$F$48 | V: 3700000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J14 | F: ='1) Data entry '!$F$48 | V: 3700000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K14 | F: ='1) Data entry '!$F$48 | V: 3700000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B15 | 'Total sales and marketing costs' | fmt=General
+   C15 | F: =SUM(C13:C14) | V: 37025000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E15 | F: =E14+E13 | V: 39277500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F15 | F: =F14+F13 | V: 37925000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G15 | F: =G14+G13 | V: 38025000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H15 | F: =H14+H13 | V: 37925000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J15 | F: =J14+J13 | V: 40125000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K15 | F: =K14+K13 | V: 42687500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B17 | 'Operating Expenses' | fmt=General
+   B18 | 'Cost of revenue' | fmt=General
+   C18 | F: =C8*$C$30 | V: 14872500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E18 | F: =E8*$C$30 | V: 14872500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F18 | F: =F8*$C$30 | V: 16359750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G18 | F: =G8*$C$30 | V: 16525000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H18 | F: =H8*$C$30 | V: 16359750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J18 | F: =J8*$C$30 | V: 19995250 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K18 | F: =K8*$C$30 | V: 21994775 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B19 | 'Research and development' | fmt=General
+   C19 | F: =C8*$C$31 | V: 11463750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E19 | F: =E8*$C$31 | V: 11463750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F19 | F: =F8*$C$31 | V: 12610125 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G19 | F: =G8*$C$31 | V: 12737500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H19 | F: =H8*$C$31 | V: 12610125 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J19 | F: =J8*$C$31 | V: 15412375 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K19 | F: =K8*$C$31 | V: 16953612.5 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B20 | 'Sales and marketing' | fmt=General
+   C20 | F: =C13+C14 | V: 37025000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E20 | F: =E13+E14 | V: 39277500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F20 | F: =F13+F14 | V: 37925000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G20 | F: =G13+G14 | V: 38025000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H20 | F: =H13+H14 | V: 37925000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J20 | F: =J13+J14 | V: 40125000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K20 | F: =K13+K14 | V: 42687500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B21 | 'General and administrative' | fmt=General
+   C21 | F: =C8*$C$32 | V: 17325000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E21 | F: =E8*$C$32 | V: 17325000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F21 | F: =F8*$C$32 | V: 19057500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G21 | F: =G8*$C$32 | V: 19250000 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H21 | F: =H8*$C$32 | V: 19057500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J21 | F: =J8*$C$32 | V: 23292500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K21 | F: =K8*$C$32 | V: 25621750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B22 | 'Total operating expenses' | fmt=General
+   C22 | F: =SUM(C18:C21) | V: 80686250 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   E22 | F: =SUM(E18:E21) | V: 82938750 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   F22 | F: =SUM(F18:F21) | V: 85952375 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   G22 | F: =SUM(G18:G21) | V: 86537500 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   H22 | F: =SUM(H18:H21) | V: 85952375 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   J22 | F: =SUM(J18:J21) | V: 98825125 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   K22 | F: =SUM(K18:K21) | V: 107257637.5 | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B23 | 'Operating Income' | fmt=General
+   C23 | F: =C8-C22 | V: 31813750 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   E23 | F: =E8-E22 | V: 29561250 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   F23 | F: =F8-F22 | V: 37797625 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   G23 | F: =G8-G22 | V: 38462500 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   H23 | F: =H8-H22 | V: 37797625 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   J23 | F: =J8-J22 | V: 52424875 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   K23 | F: =K8-K22 | V: 59117362.5 | fmt=\$#,##0_);[RED]"($"#,##0\)
+   B25 | 'Metrics' | fmt=General
+   B26 | 'Percentage net gain' | fmt=General
+   E26 | F: =(E9-E12)/'2) Performance breakdown'!$C$25 | V: -0.0200222222222222 | fmt=0.00%
+   F26 | F: =(F9-F12)/'2) Performance breakdown'!$C$25 | V: 0.092 | fmt=0.00%
+   G26 | F: =(G9-G12)/'2) Performance breakdown'!$C$25 | V: 0.102222222222222 | fmt=0.00%
+   H26 | F: =(H9-H12)/'2) Performance breakdown'!$C$25 | V: 0.092 | fmt=0.00%
+   J26 | F: =(J9-J12)/'2) Performance breakdown'!$C$25 | V: 0.316888888888889 | fmt=0.00%
+   K26 | F: =(K9-K12)/'2) Performance breakdown'!$C$25 | V: 0.428555555555556 | fmt=0.00%
+   B27 | 'Sales and marketing ROI' | fmt=General
+   C27 | F: =('3) Impact Analysis'!C8-'3) Impact Analysis'!C15)/'3) Impact Analysis'!C15 | V: 2.03848750844024 | fmt=0%
+   E27 | F: =(E8-E15)/E15 | V: 1.86423524918847 | fmt=0%
+   F27 | F: =(F8-F15)/F15 | V: 2.26301911667765 | fmt=0%
+   G27 | F: =(G8-G15)/G15 | V: 2.28731097961867 | fmt=0%
+   H27 | F: =(H8-H15)/H15 | V: 2.26301911667765 | fmt=0%
+   J27 | F: =(J8-J15)/J15 | V: 2.76947040498442 | fmt=0%
+   K27 | F: =(K8-K15)/K15 | V: 2.89751098096633 | fmt=0%
+   B29 | 'Assumptions' | fmt=General
+   E29 | "This spreadsheet is designed to provide you with a baseline analysis to determine the impact of sales productivity investments on your company's income statement.  If you know the actual amounts for the other categories (G&A, R&D, COGS) then you can enter those figures directly into the corresponding cells.  However, you can see this information is already populated.  The table on the left contains industry average % of revenue metrics that are used to populate the data in this sheet." | fmt=General
+   B30 | 'Cost of revenue' | fmt=General
+   C30 | 0.1322 | fmt=0.0%
+   B31 | 'R&D' | fmt=General
+   C31 | 0.1019 | fmt=0.0%
+   B32 | 'G&A (other)' | fmt=General
+   C32 | 0.154 | fmt=0.0%
+
+===== SHEET: '4) Scenario Diagnostic' dims=A1:G30 max_row=30 max_col=7
+merged: ['D13:F13', 'D11:F11', 'D27:F27', 'B16:F16', 'B25:C25', 'B3:F3', 'B22:C22', 'D17:F17', 'B6:F7', 'B27:C27', 'B18:C18', 'B12:C12', 'B21:C21', 'D28:F28', 'B2:F2', 'B11:C11', 'D12:F12', 'D18:F18', 'D9:F9', 'B14:C14', 'B23:F23', 'B8:F8', 'B17:C17', 'D25:F25', 'D30:F30', 'B4:F5', 'B13:C13', 'D14:F14', 'D29:F29', 'B29:C29', 'B19:C19', 'B10:C10', 'B28:C28', 'D26:F26', 'B9:C9', 'D20:F20', 'D10:F10', 'D19:F19', 'B30:C30', 'B24:F24']
+    B2 | 'Issues Preventing Achievement of Scenarios' | fmt=General
+    B3 | '©2011. Forrester Research.  All rights reserved.  ssantucci@forrester.com' | fmt=General
+    B4 | 'This spreadsheet is designed to be a diagnostic tool to help you determine obstacles that your organization must overcome to achieve your desired goal in each scenario.  For each scenario, we have listed five common issues that most IT vendors face.  The issues listed are not to be considered exhaustive, as there will be issues unique to both your specific market and your company.  ' | fmt=General
+    B8 | 'Increase close rate' | fmt=General
+    B9 | 'Issue ' | fmt=General
+    D9 | 'Reason' | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B10 | '1)  Sales people are unable to have relevant dialog with key stakeholders in their context' | fmt=General
+   D10 | 'Think of your typical sales person.  Imagine they get a meeting with a senior business executive in one of your top target accounts.  What are they going to say?  Many executives tell us one of the major problems they have is their sales organization does not understand what they do.  “We want to sell higher in the organization” is a common battle cry among other enterprise technology vendors.  However, it is not as simple as “get a meeting with the CXO”, you must be able to engage in a dialog in their context and most sales people are poorly equipped to have those conversations.  ' | fmt=General
+   B11 | '2)  Client does not clearly understand how you will provide the value you are proposing  ' | fmt=General
+   D11 | 'If a targeted account does not understand (from their point of view) how your products or services will impact them, they are not going to buy from you.  It is very common for technology companies to believe the features of their product "obviously" communicate value, and their clients will recognize that value as soon as they see it.  However, if your client cannot make the connection between the functionality you offer and how it addresses a business problem they have, you will not make a sale.  Many vendors overlook this issue and forget that while the problem and solution is obvious to them, the client is addressing the issue for the very first time.' | fmt=General
+   B12 | '3) Product does not meet needs of targeted market' | fmt=General
+   D12 | 'Once a product is developed, there is a tremendous amount of temptation to identify new applications or markets for your offering.  As a matter of fact, it is taught in business school.  All of the uses of baking soda (refrigerator freshener, toothpaste, etc) is a good example of this concept.  Unfortunately, many technology vendors overlook the tremendous complexities of their market.  A solution you build for one company may not be a good fit for another.  All companies have different business processes, organizations, and technical architectures.' | fmt=General
+   B13 | '4) Out positioned by competitor' | fmt=General
+   D13 | "Many organizations focus on this issue as a way to increase their close rate, but few understand all of the dynamics.  If you ask the sales force why a deal was lost - it's almost always product related.  (Our price was too high, our product lacked the right features, etc).  Marketing will blame the sales force's inability to properly position the product.  Best practice vendors with high close rates against their competitors focus their energies on helping their clients define their requirements.  Vendors who help influence the requirements win the business an overwhelming majority of the time.  Other best practices highly competitive organizations implement include: timely and accurate competitive information distributed to sales people, positioning tactics and knock off tactics for each competitor, and pricing strategies to lock out competition.      " | fmt=General
+   B14 | '5)  Defensible and economically justifiable business case not made to account' | fmt=General
+   D14 | 'In today’s economic climate, all major purchases are being scrutinized.  Company’s are making sure the investments they are making have a clear economic impact to the organization (and most are concentrating on ways to cut costs).  The finance department will evaluate various investments (projects) and determine which will have: the greatest internal return on investment, the shortest pay back period, and the biggest impact on the financial statement.  Not only are you competing with all of the other providers to be selected by the committee to be the “vendor of choice” for a given project, but also the other “vendor of choices” for other projects.  If your project lacks a clear business justification (in economic terms that a CFO could understand), then you are likely to be told by your champion “we are going to push this decision off until second quarter”. ' | fmt=General
+   B16 | 'Decrease Sales Cycle Time' | fmt=General
+   B17 | 'Issue ' | fmt=General
+   D17 | 'Reason / Solution' | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B18 | '1)  Lack of understanding for customers problem-solving lifecycle' | fmt=General
+   D18 | 'Because of the complexity and scale of enterprise solutions, IT organizations have a process they go through throughout the entire lifecycle of an initiative (from inception to execution).  To make sure they are successful, organizations must be able to prove internally they are taking the best approach, make sure the right people are involved, have performed their due diligence, etc. Some of these processes are formal and others are more casual.  In each step of their problem-solving process they require different types of information and create different types of deliverables.  However, sales people have their own sales process and their own agenda each time they engage with a prospect.  The different processes (customer’s problem-solving and vendor’s selling) are often out of context and can create tension, confusion, or even delays. Vendors cannot decrease their sales cycle time unless they can help facilitate their customers problem solving process.      ' | fmt=General
+   B19 | '2)  Understanding the total solution for the project is extremely complex, involved, and difficult' | fmt=General
+   D19 | 'The product or service you offer will help address a common business problem within your market segment.  Because this is an issue they have never successfully tackled before, each of your prospects must go through a decision-making process to assess the problem, determine the best way to fix it, understand what it will cost to fix it, and how they should go about fixing it.  The funding that will pay for your offering will come from an overall project budget that is allocated to address the client’s business problem.  However, there are many steps a client must go through internally to feel comfortable proceeding with that project.  Most vendors only provide information about their role in the overall project – leaving the customer to figure out the other steps.  If your customer has a clear understanding about your offerings and how to execute, but is not clear on other elements, their decision-making process will drag on.     ' | fmt=General
+   B20 | '3)  Sponsor has difficulty "selling" project internally' | fmt=General
+   D20 | 'When you consider IT organizations within Global 2000 organizations have thousands of employees, it is not too hard to find someone in an account who believes your offering can addresses a problem the firm has.  The challenge is how do you properly prepare the person who believes in your company to sell on your behalf.  What other stakeholders must be involved?  What are the internal business drives this project is related to?  How do we get a business sponsor for the project?  How do we gain committee support?  Who should be on the committee?' | fmt=General
+   B21 | '4)  Clients who are confused (by technology, the approach, or the value of what you offer) will not buy.' | fmt=General
+   D21 | "Our industry is “buzzword” driven.  Once a “theme” such as “cloud” is deemed hot, all vendors claim to have a “cloud” solution.  Each vendor has their own interpretation about the challenges that must be addressed with that theme, a different definition of CRM, a different suite of offerings, and even a different technological architecture.  If you look at it from a customer’s perspective, what do they believe?  How do they organize all of the information and decide which definition they agree with, what solution meets their needs, or which technical architecture is best for them?  Confused customers will delay buying decisions until they feel comfortable.  Don't hide behind jargon, work to be clear.   " | fmt=General
+   B22 | "5)  Client's organization lacks internal sense of urgency around capabilities you offer." | fmt=General
+   D22 | 'There are a variety of reasons clients do not have a sense of urgency around your offering.  Some of them include:  the project seems hard, executives question the benefits, the firm wants to tackle other projects with quicker returns on investment, confused about something, etc.  Each of these issues will lengthen the sales process with that account.' | fmt=General
+   B24 | 'Increase Revenue Per Transaction' | fmt=General
+   B25 | 'Issue ' | fmt=General
+   D25 | 'Reason / Solution' | fmt=_(\$* #,##0_);_(\$* \(#,##0\);_(\$* \-??_);_(@_)
+   B26 | '1)  Poor negotiation with prospect' | fmt=General
+   D26 | 'During most of the sales process, your organization has the upper hand.  You know more about a specific issue than the customer and are educating them throughout the process. However, when it comes to buying- the customer absolutely has the upper hand.  Most enterprise organizations have professional buyers who are trained to get you to discount as much as possible.  Bidding, negotiating during the end of the year or quarter, not returning your calls to make your sales people more anxious are all tactics commonly used by IT buyers to get you to drop your prices.  These tactics work because sales people (who have worked on an account for the past 6 months) are almost desperate to close and agree to almost anything.  ' | fmt=General
+   B27 | '2)  Product feature set does not meet with clients perceived value' | fmt=General
+   D27 | 'As industry analysts, we’ve been in position to listen to the buyers needs and hear various vendors’ approaches to addressing those needs.  You would be amazed at the difference.  Buyer’s will say if the product would just do X, I would get so much more value out of it.  Whereas vendors seem more focused in being able to present a favorable checklist of features in their industry.  Certainly product feature sets are important (especially to help drive close rate), but more attention to meeting customer needs will help justify higher prices. ' | fmt=General
+   B28 | '3)  Desperation by management to close quarterly revenue' | fmt=General
+   D28 | 'Vendors always need to close business to meet quarterly expectations.  This issue becomes a problem when there are not enough opportunities being worked in the pipeline at any given time.  We believe the underlying cause of this desperation is a woefully inadequate internal pipeline management and forecasting reporting process.  Most companies find out far too late what their revenue targets are going to be and thus the end of each quarter becomes a scramble for business.  ' | fmt=General
+   B29 | '4)  Economic ROI not effectively established' | fmt=General
+   D29 | 'This problem occurs after the account has approved the internal business case for the entire project and now the client is looking to acquire the piece parts that comprise the entire solution.  This problem is related to the “Defensible and economically justifiable business case not made to account” issue in that both relate to ROI.  However, the later is more focused on helping the account justify the entire project.  This issue is focused on being able to clearly defend your role in adding the value the client anticipates to achieve by successfully executing this project. ' | fmt=General
+   B30 | "5)  Product pricing doesn't align to the customer's value received" | fmt=General
+   D30 | 'Often, the pricing model or strategy of a vendor can limit its ability to realize the maximum value of a sales transaction.  There are many pricing models (perpetual licenses, annual licenses, server-based pricing, user-based pricing, leasing, activity-based pricing, etc.)  The point is that your pricing strategy must be oriented to how a customer will realize the benefits of your offering  - so they evaluate the offer more in their context.' | fmt=General
+
+Defined names: []
