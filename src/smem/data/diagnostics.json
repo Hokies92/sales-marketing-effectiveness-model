@@ -1,0 +1,80 @@
+[
+  {
+    "scenario": "increase_close_rate",
+    "label": "Increase close rate",
+    "issues": [
+      {
+        "issue": "Sales people are unable to have relevant dialog with key stakeholders in their context",
+        "reason": "Think of your typical sales person. Imagine they get a meeting with a senior business executive in one of your top target accounts. What are they going to say? Many executives tell us one of the major problems they have is their sales organization does not understand what they do. “We want to sell higher in the organization” is a common battle cry among other enterprise technology vendors. However, it is not as simple as “get a meeting with the CXO”, you must be able to engage in a dialog in their context and most sales people are poorly equipped to have those conversations."
+      },
+      {
+        "issue": "Client does not clearly understand how you will provide the value you are proposing",
+        "reason": "If a targeted account does not understand (from their point of view) how your products or services will impact them, they are not going to buy from you. It is very common for technology companies to believe the features of their product \"obviously\" communicate value, and their clients will recognize that value as soon as they see it. However, if your client cannot make the connection between the functionality you offer and how it addresses a business problem they have, you will not make a sale. Many vendors overlook this issue and forget that while the problem and solution is obvious to them, the client is addressing the issue for the very first time."
+      },
+      {
+        "issue": "Product does not meet needs of targeted market",
+        "reason": "Once a product is developed, there is a tremendous amount of temptation to identify new applications or markets for your offering. As a matter of fact, it is taught in business school. All of the uses of baking soda (refrigerator freshener, toothpaste, etc) is a good example of this concept. Unfortunately, many technology vendors overlook the tremendous complexities of their market. A solution you build for one company may not be a good fit for another. All companies have different business processes, organizations, and technical architectures."
+      },
+      {
+        "issue": "Out positioned by competitor",
+        "reason": "Many organizations focus on this issue as a way to increase their close rate, but few understand all of the dynamics. If you ask the sales force why a deal was lost - it's almost always product related. (Our price was too high, our product lacked the right features, etc). Marketing will blame the sales force's inability to properly position the product. Best practice vendors with high close rates against their competitors focus their energies on helping their clients define their requirements. Vendors who help influence the requirements win the business an overwhelming majority of the time. Other best practices highly competitive organizations implement include: timely and accurate competitive information distributed to sales people, positioning tactics and knock off tactics for each competitor, and pricing strategies to lock out competition."
+      },
+      {
+        "issue": "Defensible and economically justifiable business case not made to account",
+        "reason": "In today’s economic climate, all major purchases are being scrutinized. Company’s are making sure the investments they are making have a clear economic impact to the organization (and most are concentrating on ways to cut costs). The finance department will evaluate various investments (projects) and determine which will have: the greatest internal return on investment, the shortest pay back period, and the biggest impact on the financial statement. Not only are you competing with all of the other providers to be selected by the committee to be the “vendor of choice” for a given project, but also the other “vendor of choices” for other projects. If your project lacks a clear business justification (in economic terms that a CFO could understand), then you are likely to be told by your champion “we are going to push this decision off until second quarter”."
+      }
+    ]
+  },
+  {
+    "scenario": "decrease_cycle_time",
+    "label": "Decrease Sales Cycle Time",
+    "issues": [
+      {
+        "issue": "Lack of understanding for customers problem-solving lifecycle",
+        "reason": "Because of the complexity and scale of enterprise solutions, IT organizations have a process they go through throughout the entire lifecycle of an initiative (from inception to execution). To make sure they are successful, organizations must be able to prove internally they are taking the best approach, make sure the right people are involved, have performed their due diligence, etc. Some of these processes are formal and others are more casual. In each step of their problem-solving process they require different types of information and create different types of deliverables. However, sales people have their own sales process and their own agenda each time they engage with a prospect. The different processes (customer’s problem-solving and vendor’s selling) are often out of context and can create tension, confusion, or even delays. Vendors cannot decrease their sales cycle time unless they can help facilitate their customers problem solving process."
+      },
+      {
+        "issue": "Understanding the total solution for the project is extremely complex, involved, and difficult",
+        "reason": "The product or service you offer will help address a common business problem within your market segment. Because this is an issue they have never successfully tackled before, each of your prospects must go through a decision-making process to assess the problem, determine the best way to fix it, understand what it will cost to fix it, and how they should go about fixing it. The funding that will pay for your offering will come from an overall project budget that is allocated to address the client’s business problem. However, there are many steps a client must go through internally to feel comfortable proceeding with that project. Most vendors only provide information about their role in the overall project – leaving the customer to figure out the other steps. If your customer has a clear understanding about your offerings and how to execute, but is not clear on other elements, their decision-making process will drag on."
+      },
+      {
+        "issue": "Sponsor has difficulty \"selling\" project internally",
+        "reason": "When you consider IT organizations within Global 2000 organizations have thousands of employees, it is not too hard to find someone in an account who believes your offering can addresses a problem the firm has. The challenge is how do you properly prepare the person who believes in your company to sell on your behalf. What other stakeholders must be involved? What are the internal business drives this project is related to? How do we get a business sponsor for the project? How do we gain committee support? Who should be on the committee?"
+      },
+      {
+        "issue": "Clients who are confused (by technology, the approach, or the value of what you offer) will not buy.",
+        "reason": "Our industry is “buzzword” driven. Once a “theme” such as “cloud” is deemed hot, all vendors claim to have a “cloud” solution. Each vendor has their own interpretation about the challenges that must be addressed with that theme, a different definition of CRM, a different suite of offerings, and even a different technological architecture. If you look at it from a customer’s perspective, what do they believe? How do they organize all of the information and decide which definition they agree with, what solution meets their needs, or which technical architecture is best for them? Confused customers will delay buying decisions until they feel comfortable. Don't hide behind jargon, work to be clear."
+      },
+      {
+        "issue": "Client's organization lacks internal sense of urgency around capabilities you offer.",
+        "reason": "There are a variety of reasons clients do not have a sense of urgency around your offering. Some of them include: the project seems hard, executives question the benefits, the firm wants to tackle other projects with quicker returns on investment, confused about something, etc. Each of these issues will lengthen the sales process with that account."
+      }
+    ]
+  },
+  {
+    "scenario": "increase_deal_size",
+    "label": "Increase Revenue Per Transaction",
+    "issues": [
+      {
+        "issue": "Poor negotiation with prospect",
+        "reason": "During most of the sales process, your organization has the upper hand. You know more about a specific issue than the customer and are educating them throughout the process. However, when it comes to buying- the customer absolutely has the upper hand. Most enterprise organizations have professional buyers who are trained to get you to discount as much as possible. Bidding, negotiating during the end of the year or quarter, not returning your calls to make your sales people more anxious are all tactics commonly used by IT buyers to get you to drop your prices. These tactics work because sales people (who have worked on an account for the past 6 months) are almost desperate to close and agree to almost anything."
+      },
+      {
+        "issue": "Product feature set does not meet with clients perceived value",
+        "reason": "As industry analysts, we’ve been in position to listen to the buyers needs and hear various vendors’ approaches to addressing those needs. You would be amazed at the difference. Buyer’s will say if the product would just do X, I would get so much more value out of it. Whereas vendors seem more focused in being able to present a favorable checklist of features in their industry. Certainly product feature sets are important (especially to help drive close rate), but more attention to meeting customer needs will help justify higher prices."
+      },
+      {
+        "issue": "Desperation by management to close quarterly revenue",
+        "reason": "Vendors always need to close business to meet quarterly expectations. This issue becomes a problem when there are not enough opportunities being worked in the pipeline at any given time. We believe the underlying cause of this desperation is a woefully inadequate internal pipeline management and forecasting reporting process. Most companies find out far too late what their revenue targets are going to be and thus the end of each quarter becomes a scramble for business."
+      },
+      {
+        "issue": "Economic ROI not effectively established",
+        "reason": "This problem occurs after the account has approved the internal business case for the entire project and now the client is looking to acquire the piece parts that comprise the entire solution. This problem is related to the “Defensible and economically justifiable business case not made to account” issue in that both relate to ROI. However, the later is more focused on helping the account justify the entire project. This issue is focused on being able to clearly defend your role in adding the value the client anticipates to achieve by successfully executing this project."
+      },
+      {
+        "issue": "Product pricing doesn't align to the customer's value received",
+        "reason": "Often, the pricing model or strategy of a vendor can limit its ability to realize the maximum value of a sales transaction. There are many pricing models (perpetual licenses, annual licenses, server-based pricing, user-based pricing, leasing, activity-based pricing, etc.) The point is that your pricing strategy must be oriented to how a customer will realize the benefits of your offering - so they evaluate the offer more in their context."
+      }
+    ]
+  }
+]

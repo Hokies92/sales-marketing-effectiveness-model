@@ -36,6 +36,7 @@ which is why small changes in the throughput levers produce outsized changes in 
 ```bash
 pip install -e ".[dev]"
 pytest
+python -m smem.workbook out/SMEM.xlsx   # build the corrected workbook
 ```
 
 ```python
@@ -55,6 +56,8 @@ src/smem/
   engine.py      pure functions: rep economics, levers, income statement, impact
   scenarios.py   the six scenario columns of sheet "2) Performance breakdown"
   legacy.py      cell-exact reproduction of the ORIGINAL workbook, defects included
+  diagnostics.py the 15 qualitative obstacles (data/diagnostics.json)
+  workbook.py    generates the corrected .xlsx (live formulas over named ranges) + verifier
 tests/           engine behaviour + cell-for-cell regression against the shipped .xls
 docs/            model_teardown.md — full analysis of the original and its defects
 reference/       the original .xls, a converted .xlsx, and a full cell dump
@@ -65,7 +68,7 @@ reference/       the original .xls, a converted .xlsx, and a full cell dump
 | phase | deliverable | status |
 |---|---|---|
 | 1 | Teardown + reference engine + regression against original | ✅ |
-| 2 | Corrected `.xlsx` generated from the engine | ⏳ |
+| 2 | Corrected `.xlsx` generated from the engine, verified cell-for-cell after recalculation | ✅ |
 | 3 | Web calculator (API + embeddable widget) with AI analytics | ⏳ |
 | 4 | Benchmark store: submissions, segments, percentiles | ⏳ |
 

@@ -17,8 +17,14 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-calc
       - run: pip install -e ".[dev]"
       - run: ruff check .
       - run: ruff format --check .
       - run: mypy
-      - run: pytest --cov=smem --cov-report=term-missing
+      - run: pytest --cov=smem --cov-report=term-missing --cov-fail-under=95
+      - run: python -m smem.workbook dist/SMEM.xlsx
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SMEM-workbook-py${{ matrix.python-version }}
+          path: dist/SMEM.xlsx
