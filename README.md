@@ -46,6 +46,17 @@ base = ModelInputs()  # the workbook's fictitious company
 i = impact(base, Levers(cycle_time_reduction=0.10))
 print(f"{i.revenue_growth_pct:.1%}")  # 11.1%  (1/0.9 − 1, not 10%)
 print(f"{i.operating_income_growth_pct:.1%}")
+
+# engine v2: scenarios with economics, bridges, break-even
+from smem.assumptions import Baseline, Horizon
+from smem.scenario import Scenario, LeverSet
+from smem.compare import break_even_investment
+
+b = Baseline.from_defaults()
+close = Scenario.of("close +10%", LeverSet(close_rate_change=0.10))
+hire = Scenario.of("hire +10%", LeverSet(territory_change=0.10))
+be = break_even_investment(b, close, hire, Horizon.STEADY_STATE)
+print(f"{be.budget:,.0f}")  # 1,643,500 = ΔT × (loaded salary + travel)
 ```
 
 ## Repository layout
@@ -58,6 +69,12 @@ src/smem/
   legacy.py      cell-exact reproduction of the ORIGINAL workbook, defects included
   diagnostics.py the 15 qualitative obstacles (data/diagnostics.json)
   workbook.py    generates the corrected .xlsx (live formulas over named ranges) + verifier
+  --- engine v2 (docs/spec/business_logic_v1.md) ---
+  assumptions.py Baseline = inputs + per-input provenance + OperatingPolicy
+  operating.py   N ≠ T: productive equivalents, capacity lever P, demand ceiling, ramp policies
+  scenario.py    Lever / LeverSet / Intervention (cost, delay, risk) / Scenario
+  finance.py     typed cost lines, income statement, zero-residual bridge, integrity checks
+  compare.py     equal %, interaction, break-even investment, equal investment, goal seek, risk
 tests/           engine behaviour + cell-for-cell regression against the shipped .xls
 docs/            model_teardown.md — full analysis of the original and its defects
 reference/       the original .xls, a converted .xlsx, and a full cell dump
@@ -69,8 +86,11 @@ reference/       the original .xls, a converted .xlsx, and a full cell dump
 |---|---|---|
 | 1 | Teardown + reference engine + regression against original | ✅ |
 | 2 | Corrected `.xlsx` generated from the engine, verified cell-for-cell after recalculation | ✅ |
-| 3 | Web calculator (API + embeddable widget) with AI analytics | ⏳ |
-| 4 | Benchmark store: submissions, segments, percentiles | ⏳ |
+| 3a | Business-logic spec V1 + engine v2 (provenance, N≠T, demand, cost types, interventions, bridges, comparison modes) | ✅ |
+| 3b | Excel V2 generated from engine v2 (scenario builder, bridges, break-even) | ⏳ |
+| 4 | Web application: guided + advanced scenario builder over the same engine | ⏳ |
+| 5 | Analytics & intelligence: sensitivities, optimisation, AI-assisted interpretation (engine stays the source of numbers) | ⏳ |
+| 6 | Benchmarking: governed reference data, feasible-improvement ranges | ⏳ |
 
 ## Engineering standards
 
