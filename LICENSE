@@ -6,5 +6,5 @@ derivative works, in whole or in part, without prior written permission of the c
 
 reference/original/ contains a 2011 edition of the Sales and Marketing Efficiency Modeling Tool
 carrying a Forrester Research copyright notice; it is retained solely as a regression reference.
-Provenance and reuse rights for that edition are recorded separately (see docs/canonical.md §9
+Provenance and reuse rights for that edition are recorded separately (see docs/spec/business_logic_v1.md §9
 and ADRs) and are not altered by this notice.
