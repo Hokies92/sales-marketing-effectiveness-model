@@ -53,3 +53,13 @@ Change visibility → Private, unless public is intended. Record the decision in
 Tags `vX.Y.Z` are created by the owner on `main` after a `chore(release)` PR; CI attaches the
 built workbook. Enable Settings → Actions → Workflow permissions → Read and write (needed for
 release asset upload) when the release workflow is added.
+
+## 5. Mark the pre-governance baseline
+
+The first four commits on `main` predate these rules and were pushed directly. Do not rewrite
+them. After PR #1 is merged, tag the merge commit `v0.1.0` (annotated) so the boundary is
+explicit; the release workflow will build and attach the workbook.
+
+```bash
+git tag -a v0.1.0 -m "0.1.0 — engine v1/v2, workbook V1, governance" && git push origin v0.1.0
+```

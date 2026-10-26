@@ -9,6 +9,8 @@ All notable changes to this project are documented here. The format follows
 ### Added
 - Project governance: `CLAUDE.md`, `CONTRIBUTING.md`, `docs/gate-1.md`, `docs/canonical.md`,
   PR template, CODEOWNERS, pre-commit, seed ADRs 0001–0004.
+- Repo hygiene: proprietary LICENSE, SECURITY.md, issue templates, Dependabot, tag-driven
+  release workflow, .editorconfig; Gate 1 milestone with one issue per open criterion.
 
 ## [0.1.0] — 2026-10-24
 

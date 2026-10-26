@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq libreoffice-calc
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      - run: python -m smem.workbook "dist/SMEM_${GITHUB_REF_NAME}.xlsx"
+      - name: Verify tag matches package version
+        run: |
+          v=$(python -c "import smem; print(smem.__version__)")
+          [ "v$v" = "$GITHUB_REF_NAME" ] || { echo "tag $GITHUB_REF_NAME != smem $v"; exit 1; }
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.xlsx
+          generate_release_notes: true

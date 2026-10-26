@@ -1,0 +1,10 @@
+Copyright (c) 2002–2026 Scott Santucci / Growth Enablement LLC. All rights reserved.
+
+This repository and its contents (source code, specifications, documentation, generated
+workbooks) are proprietary. No licence is granted to use, copy, modify, distribute or create
+derivative works, in whole or in part, without prior written permission of the copyright holder.
+
+reference/original/ contains a 2011 edition of the Sales and Marketing Efficiency Modeling Tool
+carrying a Forrester Research copyright notice; it is retained solely as a regression reference.
+Provenance and reuse rights for that edition are recorded separately (see docs/canonical.md §9
+and ADRs) and are not altered by this notice.
