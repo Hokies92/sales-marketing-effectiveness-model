@@ -80,6 +80,12 @@ docs/            model_teardown.md — full analysis of the original and its def
 reference/       the original .xls, a converted .xlsx, and a full cell dump
 ```
 
+## Governance
+
+Start with [`CLAUDE.md`](CLAUDE.md) (operating instructions), [`docs/gate-1.md`](docs/gate-1.md)
+(what must be proven first), [`docs/canonical.md`](docs/canonical.md) (sources of truth and golden
+numbers) and [`CONTRIBUTING.md`](CONTRIBUTING.md) (version-control rules — strict by design).
+
 ## Phases
 
 | phase | deliverable | status |

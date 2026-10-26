@@ -1,0 +1,7 @@
+# Every path requires owner review before merge.
+*                     @Hokies92
+/src/smem/engine.py   @Hokies92
+/src/smem/legacy.py   @Hokies92
+/reference/original/  @Hokies92
+/docs/canonical.md    @Hokies92
+/docs/spec/           @Hokies92
