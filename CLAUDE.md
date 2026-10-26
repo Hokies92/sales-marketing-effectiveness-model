@@ -54,6 +54,9 @@ Defined in `docs/canonical.md`. In short:
 3. Branch, build, test, PR. One concern per PR.
 4. Update the Gate 1 status table and `CHANGELOG.md` in the same PR when a criterion moves.
 5. Report what changed and what the next criterion is. Do not expand scope.
+6. **Close every report with a "So what, now what" block** in blunt plain speech:
+   *Observation* (what was found) → *What it means for the whole model* → *Decision the owner
+   needs to make*. The normal answer comes first; this block always follows it.
 
 ## 5. What not to do
 
