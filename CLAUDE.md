@@ -58,6 +58,29 @@ Defined in `docs/canonical.md`. In short:
    *Observation* (what was found) → *What it means for the whole model* → *Decision the owner
    needs to make*. The normal answer comes first; this block always follows it.
 
+## 4a. Stream 1 protocol — how the owner's input becomes the model (accepted 2026-10-27)
+
+The owner leads **Lessons & Logic** (stream 1). Every input of theirs follows seven steps, and
+no step is skipped or advanced by Claude alone:
+
+1. **Stated** — the owner speaks, any form; the verbatim is kept.
+2. **Restated** — Claude replies in two columns: plain-words meaning | model meaning (definition,
+   rule, assumption, preference or hypothesis) and the numbers it would move. "Where I'm unsure"
+   and "Where I disagree" are separate, labelled lines. **Then stop.**
+3. **Confirmed** — the owner says "yes" or corrects. Classified together; hypotheses are tested
+   with numbers, never adopted as rules.
+4. **Recorded** — an ADR in `docs/decisions/` with the owner's words first; owner signs.
+5. **Implemented** — engine change plus a test named for the ADR, asserting the behaviour in
+   the owner's terms.
+6. **Verified** — fidelity check back to the owner with a worked example and the numbers that
+   moved; owner confirms it is what they meant.
+7. **Rendered** — only now do Excel and web show it. The Lessons Ledger (Project doc
+   `smem/lessons-ledger.md`) tracks every input's status through these steps.
+
+Workstreams: 1 Lessons & Logic (owner) · 2 Engine · 3 Excel · 4 Web · 5 Learning. Streams 3 and 4
+never compute; they consume `Baseline`, `Scenario`, `Outcome`, `Bridge` and file an issue to
+stream 2 for anything else. Only stream 1 changes a definition.
+
 ## 5. What not to do
 
 - Do not add benchmarking, AI recommendations, CRM integration, Monte Carlo or a database
